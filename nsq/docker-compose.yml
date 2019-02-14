@@ -8,6 +8,7 @@ services:
       - "4161:4161"
   nsqd:
     image: nsqio/nsq
+    hostname: nsqd
     command: /nsqd --lookupd-tcp-address=nsqlookupd:4160
     depends_on:
       - nsqlookupd
